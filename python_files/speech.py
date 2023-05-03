@@ -64,8 +64,8 @@ model = BernoulliNB()
 model.fit(xtrain, ytrain)
 
 #Get the speech from the user, analyze and return the result
-recognize = sr.Recognizer()
 try:
+    recognize = sr.Recognizer()
     with sr.Microphone() as source:
         audio_data = recognize.record(source, duration=12)
         text = recognize.recognize_google(audio_data)
