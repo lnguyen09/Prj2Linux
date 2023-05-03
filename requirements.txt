@@ -100,7 +100,6 @@ SQLAlchemy==2.0.5.post1
 sqlparse==0.4.2
 stack-data==0.6.2
 tap==0.2
-tap-mysql==1.17.5
 target-csv==0.3.0
 threadpoolctl==3.1.0
 tornado==6.2
