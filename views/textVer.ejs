@@ -1,0 +1,56 @@
+<!-- The "text version" page, which user can input the texts and receive the result-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/textVer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Create a navbar-->
+  <div class="topnav" id="myTopnav">
+    <a href="/" class="active">Home</a>
+    <a href="/textver">Text Version</a>
+    <a href="/about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="">&#9776;</a>
+  </div>
+  
+  <!--The form to perform POST request-->
+  <form id="myForm" action="/submit" method="POST">
+    <h2>Please type your message</h2>
+    <!-- Input the text-->
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <!-- The submit button-->
+    <div class="form-group">
+      <button type="submit">Submit</button>
+    </div>
+    <div style="margin-top: 50px;">
+        <h5 style="text-align: center;">Most recent 20 uses:</h5>
+    </div>
+  </form>
+
+  <!--The table showing the most recent 20 uses-->
+  <table>
+    <tr>
+        <th>Input</th>
+        <th>Result</th>
+    </tr>
+    <% details.forEach(function(item){ %>
+    <tr>
+        <td><%= item.Input %></td>
+        <td><%= item.Result%></td>
+    </tr>
+    <% }) %>
+  </table>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!-- The "About" page, which talks about the motivation behind the project and some instructions-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="/textver">Detection methods</a>
+        <a href="/about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="">&#9776;</a>
+    </div>
+    
+    <h4>Motivation</h4>
+    <p>Nowadays, stress has become a popular mental health issue that more and more people are facing, especially among students. Students are 
+      more susceptible to stress-related disorders due to academic pressure, social expectations, and personal challenges, and I can see those 
+      pressure in my friends, my colleagues, and even myself. Sometimes, we dont even realize that we are having stress. Therefore, I create the 
+      “Stress Prediction Web Application” with the hope that it could help users detect stress or track their mental health regularly. Users can 
+      go here and talk about their daily life/ feelings and the app will help them determine whether they are having stress. 
+    </p>
+    <br />
+    <br />
+    <h4>Description</h4>
+    <p>This is the web application that is integrated with machine learning techniques to analyze the users input speech and predict whether the 
+      user is stressful or not. The application will have 2 modes: speech mode and text mode. For the speech mode, the user will talk into the 
+      mic and the speech will be converted to texts. I use SpeechRecognition API for that. For the text mode, the user will type their message 
+      into the form and submit it. Then I train the Machine Learning model using the Bernoulli Naive Bayes algorithm and pass the input text to 
+      the model to predict whether that texts indicate stress or not. After that, there will be results rendered on the website indicating 
+      whether the user is currently stressful or not. There will be also a table of records stored in MongoDB database which shows the last 
+      20 uses of the users, showing what they talk/write and the result. 
+
+      I use HTML/CSS, Javascript and Ejs to build the view of the client side (frontend.) I use Javascript, Node.js and Express.js to build 
+      a backend server to route, receive, and send data across the system. I also utilize the scripting power of Python scripts to integrate 
+      the ML features into the web application.      
+    </p>
+    <br />
+    <br />
+    <h4>Future development</h4>
+    <p>I plan to create a user profile feature with login/logout, which will personalize the user experience when using the app. Now, the app is 
+      general and the results of all the users are stored and showed in the same table. In the future, each user will have their own records and 
+      history of using the application, so it is easier for them or the admin (a doctor maybe?) to manage the result of their use to keep track 
+      of their mental health condition. Moreover, the system admin account could also have the feature to search for the records of any users and 
+      calculate, for example, out of 50 recent uses, how many times the user is indicated as having stress? This could be useful for treatment. 
+      Last but not least, the website could also include some general information on how to prevent and deal with stress for quicker lookup. 
+      This is how I plan to develop my app. Please tell me if you have more interesting ideas!     
+    </p>
+
+</body>
+
+</html>
